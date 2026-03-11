@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+<title>Penales del Ahorro</title>
+<link rel="stylesheet" href="styles.css"/>
+</head>
+
+<body>
+
+<div class="app" id="app">
+
+<!-- HEADER -->
+<header class="topbar">
+
+<div class="brand">
+
+<div class="header-logos">
+<img src="assets/edusib.png" alt="EDUSIB">
+<img src="assets/moneyweek.png" alt="Global Money Week">
+</div>
+
+<div class="brandText">
+<div class="brandTitle">Penales del Ahorro</div>
+<div class="brandSub">Toca la mejor decisión financiera y anota goles ⚽</div>
+</div>
+
+</div>
+
+<div class="hud">
+
+<div class="hudItem">
+  <div class="hudLabel">Penales</div>
+  <div class="hudValue" id="hudShot">1 / 5</div>
+
+  <div class="penaltyBar" id="penaltyBar">
+    <div class="penaltyDot"></div>
+    <div class="penaltyDot"></div>
+    <div class="penaltyDot"></div>
+    <div class="penaltyDot"></div>
+    <div class="penaltyDot"></div>
+  </div>
+
+</div>
+
+<div class="hudItem">
+<div class="hudLabel">Goles</div>
+<div class="hudValue" id="hudGoals">0</div>
+</div>
+
+<div class="hudItem">
+<div class="hudLabel">Fallos</div>
+<div class="hudValue" id="hudMiss">0</div>
+</div>
+
+<button class="btn ghost" id="btnFullscreen" type="button">Pantalla completa</button>
+
+<button class="btn ghost" id="btnAudio" type="button">Sonido: ON</button>
+
+<button class="btn ghost" id="btnRestart" type="button">Reiniciar</button>
+
+</div>
+
+</header>
+
+<!-- CAMPO -->
+<main class="stage">
+
+<div class="stadiumGlow"></div>
+
+<section class="field">
+
+<div class="goal">
+
+<div class="net"></div>
+
+<img src="assets/guantes.png" class="keeper" id="keeper" alt="">
+
+<div class="target left" data-target="left"></div>
+<div class="target center" data-target="center"></div>
+<div class="target right" data-target="right"></div>
+
+</div>
+
+<img src="assets/balon.png" class="ball" id="ball" alt="">
+
+<div class="crowd">
+<div class="wave"></div>
+</div>
+
+</section>
+
+<!-- PANEL PREGUNTAS -->
+<section class="panel" id="panel">
+
+<div class="questionWrap">
+
+<div class="badge" id="topicBadge">Ahorro</div>
+
+<h1 class="question" id="questionText">Cargando…</h1>
+
+<p class="hint" id="hintText">
+Elige la mejor opción para “anotar”.
+</p>
+
+</div>
+
+<div class="choices" id="choices"></div>
+
+<div class="feedback" id="feedback">
+
+<div class="feedbackTitle" id="feedbackTitle"></div>
+
+<div class="feedbackBody" id="feedbackBody"></div>
+
+<button class="btn" id="btnNext">Siguiente penal</button>
+
+</div>
+
+<!-- PANTALLA INICIO -->
+<div class="startOverlay" id="startOverlay">
+  <div class="startCard startCardGame">
+
+    <div class="startTopLogos">
+      
+    </div>
+    <div class="startHeroIcon">🥅⚽</div>
+
+    <div class="startTitle">Desafío del Ahorro</div>
+
+    <div class="startSubtitle">
+      ¿Puedes anotar los <b>5 penales financieros</b>?
+    </div>
+
+    <div class="startSteps">
+      <div class="startStep">👆 Toca la respuesta correcta</div>
+      <div class="startStep">⚽ Anota un gol por cada acierto</div>
+      <div class="startStep">🏆 Consigue 5 de 5</div>
+    </div>
+
+    <button class="btn primary big startPlayBtn" id="btnStart" type="button">
+      ¡JUGAR AHORA!
+    </button>
+
+    <div class="startBottomNote">
+    </div>
+
+  </div>
+</div>
+<!-- PANTALLA FINAL -->
+<div class="endOverlay hidden" id="endOverlay">
+  <div class="endCard" id="endCard">
+    <div class="endIcon" id="endIcon">🏁</div>
+    <div class="endTitle" id="endTitle">¡Final!</div>
+    <div class="endScore" id="endScore">0 / 5</div>
+    <div class="endLevel" id="endLevel">—</div>
+    <div class="endMessage" id="endMessage"></div>
+    <div class="endTips" id="endTips"></div>
+    <div class="endActions">
+      <button class="btn primary big" id="btnPlayAgain">Jugar de nuevo</button>
+    </div>
+  </div>
+</div>
+</section>
+
+</main>
+
+<!-- OVERLAY GOL -->
+<div class="stadiumOverlay" id="stadiumOverlay">
+<div class="stadiumText goal" id="stadiumText">GOOOL</div>
+</div>
+
+<!-- CONFETTI -->
+<canvas id="confettiCanvas"></canvas>
+
+<footer class="footer">
+
+<div class="footerText">
+
+</div>
+
+<div class="footerTiny" id="idleInfo"></div>
+
+</footer>
+
+</div>
+
+
+<audio id="stadiumAudio" src="assets/estadio.mp3" preload="auto"></audio>
+<script src="app.js"></script>
+
+</body>
+</html>
