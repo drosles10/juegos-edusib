@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Necesidad vs Deseo</title>
+
+  <link rel="stylesheet" href="styles.css" />
+  <script src="app.js" defer></script>
+</head>
+
+<body>
+  <!-- Fondo Feria Kids -->
+  <div class="bg-fair" aria-hidden="true">
+    <svg class="sky" viewBox="0 0 1200 700" preserveAspectRatio="none">
+      <defs>
+        <linearGradient id="skyGrad" x1="0" x2="0" y1="0" y2="1">
+          <stop offset="0" stop-color="#7DD3FC"/>
+          <stop offset="0.55" stop-color="#A7F3D0"/>
+          <stop offset="1" stop-color="#FDE68A"/>
+        </linearGradient>
+      </defs>
+      <rect width="1200" height="700" fill="url(#skyGrad)"/>
+      <g class="cloud c1" opacity="0.85">
+        <ellipse cx="180" cy="130" rx="90" ry="40" fill="#fff"/>
+        <ellipse cx="240" cy="125" rx="70" ry="35" fill="#fff"/>
+        <ellipse cx="120" cy="125" rx="60" ry="32" fill="#fff"/>
+      </g>
+      <g class="cloud c2" opacity="0.8">
+        <ellipse cx="860" cy="150" rx="95" ry="42" fill="#fff"/>
+        <ellipse cx="925" cy="145" rx="70" ry="35" fill="#fff"/>
+        <ellipse cx="790" cy="145" rx="60" ry="32" fill="#fff"/>
+      </g>
+    </svg>
+
+    <svg class="flags" viewBox="0 0 1200 220" preserveAspectRatio="none">
+      <path d="M0,70 C260,110 420,20 650,75 C880,130 980,40 1200,80"
+            fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="6" stroke-linecap="round"/>
+      <g class="flag-row">
+        <path d="M120,78 l28,0 l-14,32 z" fill="#FB7185"/>
+        <path d="M170,82 l28,0 l-14,32 z" fill="#60A5FA"/>
+        <path d="M220,86 l28,0 l-14,32 z" fill="#34D399"/>
+        <path d="M270,90 l28,0 l-14,32 z" fill="#FBBF24"/>
+        <path d="M320,94 l28,0 l-14,32 z" fill="#A78BFA"/>
+        <path d="M370,98 l28,0 l-14,32 z" fill="#FB7185"/>
+        <path d="M420,102 l28,0 l-14,32 z" fill="#60A5FA"/>
+        <path d="M470,106 l28,0 l-14,32 z" fill="#34D399"/>
+        <path d="M520,110 l28,0 l-14,32 z" fill="#FBBF24"/>
+        <path d="M570,114 l28,0 l-14,32 z" fill="#A78BFA"/>
+        <path d="M620,118 l28,0 l-14,32 z" fill="#FB7185"/>
+        <path d="M670,122 l28,0 l-14,32 z" fill="#60A5FA"/>
+        <path d="M720,126 l28,0 l-14,32 z" fill="#34D399"/>
+        <path d="M770,130 l28,0 l-14,32 z" fill="#FBBF24"/>
+        <path d="M820,134 l28,0 l-14,32 z" fill="#A78BFA"/>
+        <path d="M870,138 l28,0 l-14,32 z" fill="#FB7185"/>
+        <path d="M920,142 l28,0 l-14,32 z" fill="#60A5FA"/>
+        <path d="M970,146 l28,0 l-14,32 z" fill="#34D399"/>
+        <path d="M1020,150 l28,0 l-14,32 z" fill="#FBBF24"/>
+      </g>
+    </svg>
+
+    <div class="balloon b1"><span>💛</span></div>
+    <div class="balloon b2"><span>💙</span></div>
+    <div class="balloon b3"><span>💚</span></div>
+
+    <div class="coin k1">Q</div>
+    <div class="coin k2">$</div>
+    <div class="coin k3">Q</div>
+
+    <div class="ground"></div>
+  </div>
+
+  <!-- Banner -->
+<div class="fair-banner">
+
+  <!-- Logo Global (reemplaza el texto) -->
+  <div class="fair-logos-left">
+    <img src="assets/Global.png"
+         alt="Juego de Educación Financiera"
+         class="logo logo-juego">
+  </div>
+
+  <!-- Logos institucionales -->
+  <div class="fair-logos">
+    <img src="assets/edusib.png" class="logo" alt="EDUSIB">
+  </div>
+
+</div>
+
+
+
+  <!-- JUEGO -->
+<header>
+  <div class="header-actions">
+  <button id="muteBtn" class="pill">🔊 Música</button>
+
+  <div class="lives" id="lives" aria-label="Vidas">
+    <span class="heart on" aria-hidden="true">❤️</span>
+    <span class="heart on" aria-hidden="true">❤️</span>
+    <span class="heart on" aria-hidden="true">❤️</span>
+  </div>
+
+  <div class="pill" id="scorePill">Puntos: 0</div>
+</div>
+
+ <!-- 👉 AQUÍ VA EL TÍTULO -->
+  <div class="header-title">
+    <div class="title-main">¿Lo Necesito o lo Deseo?</div>
+    
+  </div>
+
+</header>
+
+  <main class="stage">
+    <div class="hint">Instrucciones: Arrastra la tarjeta a la opción correcta.</div>
+
+    <div class="card" id="card" aria-label="Tarjeta">
+      <div class="emoji" id="emoji">🍦</div>
+      <div class="title" id="title">Helado</div>
+      <div class="subtitle">¿Es una necesidad o un deseo?</div>
+    </div>
+
+    <div class="zones">
+      <div class="zone" id="need" data-choice="need">
+        <strong>Necesidad</strong>
+        <span>Algo esencial para vivir o estar bien.</span>
+      </div>
+      <div class="zone" id="want" data-choice="want">
+        <strong>Deseo</strong>
+        <span>Algo que quieres, pero no es esencial.</span>
+      </div>
+    </div>
+
+<!-- Progreso de la ronda (abajo) -->
+<div class="progress-bottom" aria-label="Progreso de la ronda">
+  <div class="progress-text" id="roundText">Tarjeta 1/10</div>
+  <div class="progress-bar">
+    <div class="progress-fill" id="progressFill"></div>
+  </div>
+</div>
+
+
+    <div class="bar">
+      <div class="msg" id="msg"></div>
+      <button id="resetBtn" type="button">Reiniciar</button>
+    </div>
+  </main>
+<canvas id="confetti" aria-hidden="true"></canvas>
+
+<!-- Pantalla final -->
+<div class="overlay" id="winScreen" aria-hidden="true">
+  <div class="win-card">
+
+<!-- Avatar SOLO para pantalla de inicio -->
+    <img
+      src="assets/avatarnina.png"
+      alt="Avatar guía"
+      class="intro-avatar"
+    />
+
+    <div class="win-emoji">🎉</div>
+    <div class="win-title">¡Felicidades!</div>
+    <div class="win-subtitle">¡Misión completa! Eres un crack de las Finanzas Personales.</div>
+    <div class="win-score" id="winScore">Puntos: 0/10</div>
+    <button id="playAgainBtn" type="button">Jugar otra vez</button>
+  </div>
+</div>
+<audio id="bgMusic" loop preload="auto">
+  <source src="assets/music.mp3" type="audio/mpeg">
+</audio>
+</body>
+</html>
