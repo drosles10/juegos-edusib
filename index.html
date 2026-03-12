@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"
+  />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="theme-color" content="#06152f" />
+  <title>Juegos Interactivos EDUSIB</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <div id="game-shell">
+      <div id="appShell">
+        <div class="bg-overlay"></div>
+        <div class="bg-glow glow-1"></div>
+        <div class="bg-glow glow-2"></div>
+        <div class="bg-glow glow-3"></div>
+
+        <div class="floating-particles" aria-hidden="true">
+          <span class="particle p1"></span>
+          <span class="particle p2"></span>
+          <span class="particle p3"></span>
+          <span class="particle p4"></span>
+          <span class="particle p5"></span>
+          <span class="particle p6"></span>
+        </div>
+
+        <header class="topbar">
+          <div class="brand brand-with-logos">
+            <img src="assets/edusib.png" alt="Logo EDUSIB" class="header-logo" />
+            <img src="assets/global.png" alt="Logo Global Money Week" class="header-logo" />
+
+            <div class="brand-text">
+              <h1>Juegos Interactivos</h1>
+              <p>Educación Financiera</p>
+            </div>
+          </div>
+
+          <div class="topbar-right">
+            <div class="datetime">
+              <div id="currentDate" class="date-text"></div>
+              <div id="currentTime" class="time-text"></div>
+            </div>
+
+            <button id="fullscreenBtn" class="fullscreen-btn touchable" type="button">
+              ⛶ Pantalla completa
+            </button>
+          </div>
+        </header>
+
+        <main class="main-content">
+          <section class="hero">
+            <h2>Selecciona el juego que deseas realizar</h2>
+            <p>
+              Vive una experiencia divertida, dinámica e interactiva para aprender
+              sobre Educación Financiera
+            </p>
+          </section>
+
+          <section class="games-grid">
+            <a href="penales-del-ahorro/index.html" class="game-card game-card-penales touchable" data-nav="true">
+              <div class="card-shine"></div>
+              <div class="card-confetti confetti-1"></div>
+              <div class="card-ring"></div>
+
+              <div class="card-content">
+                <div class="game-icon">⚽</div>
+                <div class="game-label">Juego 1</div>
+                <h3>Penales del Ahorro</h3>
+                <p>
+                  Anota goles tomando buenas decisiones financieras y descubre la
+                  importancia del ahorro.
+                </p>
+
+                <div class="card-footer">
+                  <span class="play-text">Ingresar al juego</span>
+                  <span class="arrow">→</span>
+                </div>
+              </div>
+            </a>
+
+            <a href="necesidad-vs-deseo/index.html" class="game-card game-card-deseo touchable" data-nav="true">
+              <div class="card-shine"></div>
+              <div class="card-confetti confetti-2"></div>
+              <div class="card-ring"></div>
+
+              <div class="card-content">
+                <div class="game-icon">🛍️</div>
+                <div class="game-label">Juego 2</div>
+                <h3>Necesidad vs Deseo</h3>
+                <p>
+                  Aprende a diferenciar entre necesidades y deseos mediante retos
+                  divertidos y visuales.
+                </p>
+
+                <div class="card-footer">
+                  <span class="play-text">Ingresar al juego</span>
+                  <span class="arrow">→</span>
+                </div>
+              </div>
+            </a>
+          </section>
+        </main>
+
+        <footer class="footer">
+          <p>EDUSIB · Global Money Week · Plataforma de aprendizaje interactivo</p>
+        </footer>
+
+        <div id="attractMode" class="attract-mode" aria-hidden="true">
+          <div class="attract-box">
+            <div class="attract-glow"></div>
+            <div class="attract-icon">✨</div>
+            <h3>¡Toca la pantalla para jugar!</h3>
+            <p>⚽ Pon a prueba tus decisiones financieras</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
