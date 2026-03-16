@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Juegos Interactivos EDUSIB</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="bg-base"></div>
+  <div class="bg-overlay"></div>
+  <div class="bg-noise"></div>
+
+  <div class="bg-glow glow-1"></div>
+  <div class="bg-glow glow-2"></div>
+  <div class="bg-glow glow-3"></div>
+  <div class="bg-glow glow-4"></div>
+
+  <div class="floating-particles" aria-hidden="true">
+    <span class="particle p1"></span>
+    <span class="particle p2"></span>
+    <span class="particle p3"></span>
+    <span class="particle p4"></span>
+    <span class="particle p5"></span>
+    <span class="particle p6"></span>
+    <span class="particle p7"></span>
+    <span class="particle p8"></span>
+    <span class="particle p9"></span>
+    <span class="particle p10"></span>
+    <span class="particle p11"></span>
+    <span class="particle p12"></span>
+  </div>
+
+  <header class="topbar reveal reveal-down">
+
+    <div class="brand brand-with-logos">
+      <img src="assets/edusib.png" alt="Logo EDUSIB" class="header-logo" />
+      <img src="assets/global.png" alt="Logo Global Money Week" class="header-logo" />
+
+      <div class="brand-text">
+        <h1>Juegos Interactivos</h1>
+        <p>Educación Financiera</p>
+      </div>
+    </div>
+
+    <div class="topbar-right">
+
+      <button id="fullscreenBtn" class="fullscreen-btn pulse-ring" type="button">
+        <span class="btn-glow"></span>
+        <span class="btn-text">Pantalla completa</span>
+      </button>
+
+    </div>
+
+  </header>
+
+  <main class="main-content">
+
+    <section class="hero">
+
+      <h2 class="reveal reveal-up delay-2">
+        Selecciona el juego que deseas realizar
+      </h2>
+
+      <p class="reveal reveal-up delay-3">
+        Vive una experiencia divertida, dinámica e interactiva para aprender
+        sobre Educación Financiera
+      </p>
+
+    </section>
+
+    <section class="games-grid">
+
+      <a href="penales-del-ahorro/index.html" class="game-card game-card-penales reveal reveal-up delay-4">
+
+        <div class="card-ambient-glow"></div>
+        <div class="card-border-light"></div>
+        <div class="card-shine"></div>
+        <div class="card-scan"></div>
+        <div class="card-confetti confetti-1"></div>
+
+        <div class="card-content">
+
+          <div class="game-icon-wrap">
+            <div class="game-icon">⚽</div>
+          </div>
+
+          <div class="game-label">Juego 1</div>
+
+          <h3>Penales del Ahorro</h3>
+
+          <p>
+            Anota goles tomando buenas decisiones financieras y descubre la
+            importancia del ahorro.
+          </p>
+
+          <div class="card-footer">
+            <span class="play-text">Ingresar al juego</span>
+            <span class="arrow">→</span>
+          </div>
+
+        </div>
+
+      </a>
+
+      <a href="necesidad-vs-deseo/index.html" class="game-card game-card-deseo reveal reveal-up delay-5">
+
+        <div class="card-ambient-glow"></div>
+        <div class="card-border-light"></div>
+        <div class="card-shine"></div>
+        <div class="card-scan"></div>
+        <div class="card-confetti confetti-2"></div>
+
+        <div class="card-content">
+
+          <div class="game-icon-wrap">
+            <div class="game-icon">🛍️</div>
+          </div>
+
+          <div class="game-label">Juego 2</div>
+
+          <h3>Necesidad vs Deseo</h3>
+
+          <p>
+            Aprende a diferenciar entre necesidades y deseos mediante retos
+            divertidos y visuales.
+          </p>
+
+          <div class="card-footer">
+            <span class="play-text">Ingresar al juego</span>
+            <span class="arrow">→</span>
+          </div>
+
+        </div>
+
+      </a>
+
+    </section>
+
+    <div id="attractHint" class="attract-hint" aria-hidden="true">
+      <span class="attract-dot"></span>
+      Toca un juego para comenzar
+    </div>
+
+  </main>
+
+  <footer class="footer reveal reveal-up delay-5">
+    <p>EDUSIB · Global Money Week · Plataforma de aprendizaje interactivo</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
